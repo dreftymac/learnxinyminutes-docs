@@ -16,11 +16,13 @@ contributors:
     The tokens are user-configurable.
 -#}
 
+Hello {{project_author}}! This is a variable placeholder.
+
 {#-
 @@@ ------------------------------------------------------------------------
 @@@ the following YAML-formmated data is used as the demonstration data 
 @@@ ------------------------------------------------------------------------
-project_author:   
+project_author:   valued customer
 project_name:     barebones jinja2 demo
 project_desc:     Learn X in Y minutes
 project_url:      "https://github.com/adambard/learnxinyminutes-docs"
