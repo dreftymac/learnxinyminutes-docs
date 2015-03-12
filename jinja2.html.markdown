@@ -5,5 +5,5 @@ contributors:
   - ["Dreftymac", "https://github.com/dreftymac"]
 ---
 
-Jinja2 is a modern and designer-friendly templating language for Python, modelled after Django’s templates. 
+Jinja2 is a templating language for Python, modelled after Django. 
 * [jinja2 intro](http://jinja.pocoo.org/docs/dev/intro/#)
