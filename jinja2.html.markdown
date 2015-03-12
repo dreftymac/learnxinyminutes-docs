@@ -10,22 +10,23 @@ contributors:
 ```jinja
 {# this is a comment #}
 
-{#
-  jinja2 supports balanced tokens for specifying comments,
-    placeholders, and control structures.
-#}
-
-{#
-  The tokens are user-configurable.
-  <%   this could work as an alternate token syntax  %>
-  <!-- this could work as an alternate token syntax -->
-#}
-
 Welcome to {{project_name}}!
 
 {#- this is a comment with leading and trailing whitespace trimmed -#}
 
 This is a feature of {{project_desc}}!
+
+
+{#
+  jinja2 supports balanced tokens for specifying comments,
+    placeholders, and control structures.
+#}
+  
+{#
+  The tokens are user-configurable.
+  <%   this could work as an alternate token syntax  %>
+  <!-- this could work as an alternate token syntax -->
+#}
 
 {#
 @@@ ------------------------------------------------------------------------
@@ -34,16 +35,16 @@ This is a feature of {{project_desc}}!
 #}
 {%- set orgname   = 'Fake Company'  -%}
 {%- set orgyear   = 1999            -%}          
-{%- set orgroles  = {"admin":"monitoring the servers"
-    ,"developer":"processing tasks"
-    ,"accountant":"counting the beans"}
+{%- set orgroles  = {"admin":"monitors the servers"
+    ,"developer":"processes tasks"
+    ,"accountant":"counts the beans"}
     -%}
 
 ### ********************
 Welcome to {{orgname}}.
 We were established in {{orgyear}}.          
 {% for role in orgroles.keys() |sort %}
-  * The {{role}} person is in charge of {{orgroles[role]}}!
+  * The {{role}} person {{orgroles[role]}}!
 {% endfor %}
 ### ********************
 
@@ -100,11 +101,11 @@ table_of_datarows:
 @@@ ------------------------------------------------------------------------                   
 #}
 
+{%- for row in table_of_datarows %}
+  <b>{{ row.alpha |upper }}</b>
+{% endfor -%}
+
 {% for field in (table_of_datarows[0].keys() |sort) if not field == 'alpha' %}
   <a href="{{project_url}}">{{field}}</a>
 {% endfor %}
-
-{%- for row in table_of_datarows %}
-  <b>{{ row.alpha }}</b>
-{% endfor -%}
 ```
