@@ -34,16 +34,16 @@ This is a feature of {{project_desc}}!
 #}
 {%- set orgname   = 'Fake Company'  -%}
 {%- set orgyear   = 1999            -%}          
-{%- set orgroles  = {"admin":"monitors the servers"
-    ,"developer":"processes tasks"
-    ,"accountant":"counts the beans"}
+{%- set orgroles  = {"admin":"monitoring the servers"
+    ,"developer":"processing tasks"
+    ,"accountant":"counting the beans"}
     -%}
 
 ### ********************
 Welcome to {{orgname}}.
 We were established in {{orgyear}}.          
 {% for role in orgroles.keys() |sort %}
-  * The {{role}} person {{orgroles[role]}}!
+  * The {{role}} person is in charge of {{orgroles[role]}}!
 {% endfor %}
 ### ********************
 
