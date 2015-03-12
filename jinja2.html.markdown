@@ -11,8 +11,37 @@ contributors:
 {#- this is a comment -#}
 
 {#-
-  jinja2 supports balanced tokens for specifying comments, placeholders and control structures.
-  The tokens are user-configurable.
+  jinja2 supports balanced tokens for specifying comments,
+    placeholders, and control structures.
+    The tokens are user-configurable.
 -#}
 
+{#-
+@@@ ------------------------------------------------------------------------
+@@@ the following YAML-formmated data is used as the demonstration data 
+@@@ ------------------------------------------------------------------------
+project_author:   
+project_name:     barebones jinja2 demo
+project_desc:     Learn X in Y minutes
+project_url:      "https://github.com/adambard/learnxinyminutes-docs"
+list_of_colors:
+  - red
+  - orange
+  - yellow
+  - green
+  - blue
+  - indigo
+  - violet
+dictionary_of_places:
+  New York:
+    Capital: Albany
+  California:
+    Capital: Sacramento
+  France:
+    Capital: Paris
+table_of_datarows:
+  - {"alpha":one, "bravo":two, "charlie":three, }
+  - {"alpha":uno, "bravo":dos, "charlie":tres,  }
+  - {"alpha":ein, "bravo":swei, "charlie":drei, }
+-#}
 ```
