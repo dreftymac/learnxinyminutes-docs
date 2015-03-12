@@ -10,23 +10,22 @@ contributors:
 ```jinja
 {# this is a comment #}
 
-Welcome to {{project_name}}!
-
-{#- this is a comment with leading and trailing whitespace trimmed -#}
-
-This is a feature of {{project_desc}}!
-
-
 {#
   jinja2 supports balanced tokens for specifying comments,
     placeholders, and control structures.
 #}
-  
+
 {#
   The tokens are user-configurable.
   <%   this could work as an alternate token syntax  %>
   <!-- this could work as an alternate token syntax -->
 #}
+
+Welcome to {{project_name}}!
+
+{#- this is a comment with leading and trailing whitespace trimmed -#}
+
+This is a feature of {{project_desc}}!
 
 {#
 @@@ ------------------------------------------------------------------------
