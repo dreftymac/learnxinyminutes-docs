@@ -101,11 +101,29 @@ table_of_datarows:
 @@@ ------------------------------------------------------------------------                   
 #}
 
-{%- for row in table_of_datarows %}
-  <b>{{ row.alpha |upper }}</b>
-{% endfor -%}
-
 {% for field in (table_of_datarows[0].keys() |sort) if not field == 'alpha' %}
   <a href="{{project_url}}">{{field}}</a>
 {% endfor %}
+
+{%- for row in table_of_datarows %}
+  <b>{{ row.alpha }}</b>
+{% endfor -%}
+
+{#
+@@@ ------------------------------------------------------------------------
+@@@ loops support special jinja2 system variables
+@@@ ------------------------------------------------------------------------                   
+#}
+{% for item in list_of_colors %}
+  {% if loop.first %}loop.first {{loop.first}}  {%endif%}
+  loop.last         {{loop.last}}              
+  loop.index        {{loop.index}}  
+  loop.length       {{loop.length}}  
+  loop.expression   {{"%04d"%(loop.length + loop.index * 3)}}  
+  loop.index0       {{loop.index0}}  
+  loop.cycle        {{loop.cycle('odd','even')}}
+  loop.revindex     {{loop.revindex}}
+  loop.revindex0    {{loop.revindex0}}
+{% endfor %} 
 ```
+
